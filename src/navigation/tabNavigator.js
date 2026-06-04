@@ -60,10 +60,9 @@ export default function TabNavigator() {
   );
 }
 
-// 4. Clean layout styling for header hits
 const styles = StyleSheet.create({
   headerButton: {
-    paddingHorizontal: 16, // Expands the touchable area for easy tapping
+    paddingHorizontal: 16,
     height: "100%",
     justifyContent: "center",
     alignItems: "center",

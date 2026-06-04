@@ -1,8 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import Header from "../common/header";
 
 export default function Routines() {
+  const navigation = useNavigation();
   return (
     <View>
       <Header title="Recent Routines" subTitle="See all" />
@@ -17,7 +19,11 @@ export default function Routines() {
             Build your first choreography to get started
           </Text>
         </View>
-        <TouchableOpacity style={styles.routineButton} activeOpacity={0.8}>
+        <TouchableOpacity
+          style={styles.routineButton}
+          activeOpacity={0.8}
+          onPress={() => navigation.navigate("NewRoutine")}
+        >
           <Ionicons name="add-circle-outline" size={20} color="#fff" />
           <Text style={styles.btnText}>New Routine</Text>
         </TouchableOpacity>

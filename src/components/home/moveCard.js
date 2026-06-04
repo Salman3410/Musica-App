@@ -5,7 +5,7 @@ export default function MoveCard() {
   return (
     <View style={styles.container}>
       <View>
-        <Entypo name="dot-single" size={24} color="black" />
+        <Entypo name="dot-single" size={24} color="green" />
       </View>
       <View style={styles.card}>
         <Text style={styles.title}>L.LHK CBL OT RST</Text>
