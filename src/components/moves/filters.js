@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
-import SearchBar from "./searchBar";
 import PostitionFilter from "./postitionFilter";
 import DifficultyFilter from "./difficultyFilter";
 import ResultCount from "./resultCount";
+import SearchBar from "../common/searchBar";
 
 export default function Filters() {
   return (
@@ -10,7 +10,7 @@ export default function Filters() {
       <SearchBar />
       <PostitionFilter />
       <DifficultyFilter />
-      <ResultCount />
+      <ResultCount count={8} title="moves" />
     </View>
   );
 }

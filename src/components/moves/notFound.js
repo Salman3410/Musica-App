@@ -1,19 +1,19 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { AntDesign, Entypo } from "@expo/vector-icons/";
 
-export default function NotFound() {
+export default function NotFound({ buttonText, tagline, title }) {
   return (
     <View style={styles.container}>
       <View style={styles.icon}>
         <AntDesign name="question" size={24} color="#7A6558" />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>No Moves Found</Text>
-        <Text style={styles.tagline}>This move isn't in library yet.</Text>
+        <Text style={styles.text}>{title}</Text>
+        <Text style={styles.tagline}>{tagline}</Text>
       </View>
       <TouchableOpacity style={styles.button} activeOpacity={0.8}>
         <Entypo name="plus" size={18} color="#007AFF" />
-        <Text style={styles.buttonText}>Create your own move</Text>
+        <Text style={styles.buttonText}>{buttonText}</Text>
       </TouchableOpacity>
       <View style={styles.footer}>
         <Text style={styles.footerText}>or adjust your filters</Text>

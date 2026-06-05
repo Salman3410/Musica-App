@@ -1,13 +1,15 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
-export default function SearchBar() {
+export default function SearchBar({ value, onChange }) {
   return (
     <View style={styles.container}>
       <Feather name="search" size={20} color="#ccc" />
       <TextInput
         style={styles.input}
         placeholder="Search 1,000+ moves or shortcuts..."
+        value={value}
+        onChange={onChange}
       />
     </View>
   );

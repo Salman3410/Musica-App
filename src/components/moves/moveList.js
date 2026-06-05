@@ -15,7 +15,11 @@ export default function MoveList() {
       {moves.length > 0 ? (
         moves.map((move, index) => <MoveCard key={index} data={move} />)
       ) : (
-        <NotFound />
+        <NotFound
+          title="No Moves Found"
+          tagline="This move isn't in the library yet."
+          buttonText="Create your own move"
+        />
       )}
     </ScrollView>
   );
